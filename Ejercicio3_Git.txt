@@ -1,0 +1,44 @@
+> cd libro-git
+> git reset --hard 48ed8
+> git remote remove origin
+
+Ejercicio 1
+> git branch bibliografia
+> git branch -av // Nota: A mí me funciona el comando --> git branch
+
+Ejercicio2
+>echo -e>"En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto." >capitulo4.txt
+> git add .
+> git commit -m "Añadido capítulo 4."
+> git log --graph --all --oneline
+
+
+Ejercicio 3
+> git checkout bibliografia
+> echo e-"Chacon, S. and Straub, B. Pro Git. Apress." >bibliografia.txt
+> git add .
+> git commit -m "Añadida primera referencia bibliográfica."
+> git log --graph --all --oneline
+
+Ejercicio 4
+> git checkout master
+> git merge bibliografia
+> git log --graph --all --oneline
+> git branch -d bibliografia
+> git log --graph --all --oneline
+
+Ejercicio 5
+> git branch bibliografia
+> git checkout bibliografia
+> echo e-"Scott Chacon and Ben Straub. Pro Git. Apress. -Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)" >bibliografia.txt
+> git commit -a -m "Añadida nueva referencia bibliográfica."
+> git checkout master
+> echo e-"Chacon, S. and Straub, B. Pro Git. Apress. - Loeliger, J. and McCullough, M. Version control with Git. O'Reilly." > bibliografia.txt
+> git commit -a -m "Añadida nueva referencia bibliográfica."
+> git merge bibliografia
+> git nano bibliografia
+> echo e-"Chacon, S. and Straub, B. Pro Git. Apress. -Loeliger, J. and McCullough, M. Version control with Git. O’Reilly. -Hodson, R. Ry’s Git Tutorial. Smashwords (2014)" > bibliografia.txt
+
+Nota: Aquí realizamos los cambios indicados en el fichero
+> git commit -a -m "Solucionado conflicto bibliografía."
+> git log --graph --all --oneline
