@@ -1,0 +1,30 @@
+4.EJERCICIOS DE REPOSITORIOS REMOTOS
+
+>cd git
+>git clone https://github.com/NeryGabriel1/librogit
+>cd libro-git
+>git reset --hard cb1e4
+>git remote remove origin
+
+Ejercicio 1
+>git remote add github  https://github.com/NeryGabriel1/librogit
+>git remote -v 
+
+Ejercicio2
+>git push --set-upstream origin master
+
+Ejercicio 3
+>git clone https://github.com/NeryGabriel1/librogit
+>cd libro-git
+>echo -e "J. K. Rowling(J.K.Rowling@gmail.com)" > autores.txt
+>git add .
+>git commit -m "Añadido autor"
+>git push origin master
+
+Ejercicio 4
+>git clone https://github.com/NeryGabriel1/librogit
+>git checkout -b auditoria
+>echo -e "JK.Rowling(JK.Rowling@gmail.com)" > autores.txt
+>git add .
+>git commit -m "Añadido nuevo autor"
+>git push origin auditoria
