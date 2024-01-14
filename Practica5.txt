@@ -1,0 +1,34 @@
+5.EJERCICIOS DE DESHACER CAMBIOS
+>cd git 
+>git clone https://github.com/NeryGabriel1/librogit
+>cd libro-git
+>git reset --hard 48ed8
+>git remote remove origin
+
+Ejercicio 1
+>nano indice.txt 
+>git status
+>git checkout -- indice.txt
+>git status
+
+Ejercicio 2
+>nano indice.txt
+>git add . 
+>git status
+>git reset indice.txt
+>git status
+>git checkout -- indice.txt
+>git status
+
+Ejercicio 3
+>nano indice.txt
+>rm capitulos/capitulo3.txt
+>touch capitulos/capitulo4.txt
+>git add .
+>git status
+>git reset
+>git status
+>git checkout -- .
+>git status
+>git clean -f
+>git status
